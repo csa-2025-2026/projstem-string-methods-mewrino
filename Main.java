@@ -14,9 +14,11 @@ public class Main
     // int N = scan.nextInt(); Problem 1
     // lastFirstN(word1, word2, N); Problem 1
 
-    stringManip(word1, word2); // Problem 2
+    // stringManip(word1, word2); // Problem 2
 
-  
+    String removed = removeStr(word1, word2);
+    System.out.println(removed);
+
   }
 
   /** Precondition: s1 and s2 are not null
@@ -49,22 +51,22 @@ public class Main
   */
   public static void stringManip(String word1, String word2) // Problem 2
   {
-    word1 = word1.toUpperCase();
+    /* word1 = word1.toUpperCase();
     System.out.println(word1);
     
     word2 = word2.substring(0, 1).toUpperCase() + word2.substring(1).toLowerCase();
-    System.out.println(word2);
-  
+    System.out.println(word2); */
   }
   
-
 
   /** Precondition: s1 and s2 are not null
   * Precondition: s2 is a substring of s1 and can be found at least one time in s1
   */
-  public static String removeStr(String s1, String s2)
+  public static String removeStr(String word1, String word2) // Problem 3
   {
     String output = null;
+    int index = word1.indexOf(word2);
+    output = word1.substring(0, index) + word1.substring(index + word2. length());
     return output;
   }
 }
