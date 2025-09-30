@@ -49,24 +49,31 @@ public class Main
 
   /** Precondition: s1 and s2 are not null
   */
-  public static void stringManip(String word1, String word2) // Problem 2
+  /* public static void stringManip(String word1, String word2) // Problem 2
   {
-    /* word1 = word1.toUpperCase();
+    word1 = word1.toUpperCase();
     System.out.println(word1);
     
     word2 = word2.substring(0, 1).toUpperCase() + word2.substring(1).toLowerCase();
-    System.out.println(word2); */
+    System.out.println(word2); 
   }
   
 
   /** Precondition: s1 and s2 are not null
   * Precondition: s2 is a substring of s1 and can be found at least one time in s1
   */
+
   public static String removeStr(String word1, String word2) // Problem 3
   {
-    String output = null;
-    int index = word1.indexOf(word2);
-    output = word1.substring(0, index) + word1.substring(index + word2. length());
-    return output;
+
+    int remove = word1.indexOf(word2);
+    String firstPart = word1.substring(0, remove);
+    String lastPart = word1.substring(word1.length()-remove);
+
+    
+    String removed = firstPart + lastPart;
+    return removed;
+
   }
+
 }
